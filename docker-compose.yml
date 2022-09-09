@@ -19,7 +19,7 @@ services:
       build: 
         context: "."
         dockerfile: "./Backend/Dockerfile"
-      depends_on:
+      #depends_on:
       #s - mongo-backend
       ports:
         - 3000:3000
