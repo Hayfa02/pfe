@@ -21,7 +21,7 @@ const start = async () => {
       {
         useNewUrlParser: true,
         useUnifiedTopology: true,
-        useUnifiedTopology: true
+        serverApi: ServerApiVersion.v1
       }
     );
     console.log("Successfully connected to the database");
