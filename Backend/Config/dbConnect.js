@@ -17,10 +17,12 @@ const mongoose = require("mongoose");
 const start = async () => {
   try {
     await mongoose.connect(
-      'mongodb://root:password@localhost:27017/PFE',
-      {useNewUrlParser: true},
-      {useUnifiedTopology: true},
-      {serverSelectionTimeoutMS: 5000}
+      'mongodb://root:password@mongo-backend:27017/PFE',
+      {
+        useNewUrlParser: true,
+        useFindAndModify: false,
+        useUnifiedTopology: true
+      }
     );
     console.log("Successfully connected to the database");
   } catch (error) {
