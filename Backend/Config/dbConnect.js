@@ -33,17 +33,17 @@ const mongoose = require("mongoose");
 
 start();**/
 
-mongoose.connect(
+/**mongoose.connect(
   'mongodb://root:password@mongo-backend:27017/PFE',
 {
   useNewUrlParser: true,
   useUnifiedTopology: true
 }).
-  catch(error => handleError(error));
+  catch(error => handleError(error));**/
 
 // Or:
-/**try {
+try {
   await mongoose.connect('mongodb://root:password@mongo-backend:27017/PFE');
 } catch (error) {
   handleError(error);
-}**/
+}
