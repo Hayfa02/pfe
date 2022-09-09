@@ -20,6 +20,7 @@ const start = async () => {
       'mongodb://root:password@mongo-backend:27017/PFE',
       {
         useNewUrlParser: true,
+        useUnifiedTopology: true,
         useUnifiedTopology: true
       }
     );
