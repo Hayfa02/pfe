@@ -14,14 +14,13 @@ const mongoose = require("mongoose");
 
 // ...
 
-const start = async () => {
+/**const start = async () => {
   try {
     await mongoose.connect(
       'mongodb://root:password@mongo-backend:27017/PFE',
       {
         useNewUrlParser: true,
-        useUnifiedTopology: true,
-        serverApi: ServerApiVersion.v1
+        useUnifiedTopology: true
       }
     );
     console.log("Successfully connected to the database");
@@ -32,4 +31,19 @@ const start = async () => {
   }
 };
 
-start();
+start();**/
+
+mongoose.connect(
+  'mongodb://root:password@mongo-backend:27017/PFE',
+{
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+}).
+  catch(error => handleError(error));
+
+// Or:
+/**try {
+  await mongoose.connect('mongodb://root:password@mongo-backend:27017/PFE');
+} catch (error) {
+  handleError(error);
+}**/
