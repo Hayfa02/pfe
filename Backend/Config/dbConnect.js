@@ -43,7 +43,7 @@ start();**/
 
 // Or:
 try {
-  await mongoose.connect('mongodb://root:password@mongo-backend:27017/PFE');
+  mongoose.connect('mongodb://root:password@mongo-backend:27017/PFE');
 } catch (error) {
   handleError(error);
 }
