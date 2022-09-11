@@ -10,7 +10,7 @@ const connectDB = async () => {
         await mongoose.connect(`mongodb://${user}:${password}+'@'+${server}/${database}`, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
-            useFindAndModify: false,
+            //useFindAndModify: false,
             useCreateIndex: true
         });
 
