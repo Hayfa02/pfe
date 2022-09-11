@@ -1,10 +1,23 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://root:password@mongo-backend:27017/PFE', { authSource:'PFE', useNewUrlParser: true, useUnifiedTopology: true})
-  
-mongoose.connection
-  .once("open", () => console.log("Successfully connected to the database"))
-  .on("erreur", error => {
-    console.log("Could not connect to the database. Error..." , error);
+const server = 'mongo-backend:27017'; // REPLACE WITH YOUR OWN SERVER
+//const server1= 'localhost:27017';
+const database = 'PFE';          // REPLACE WITH YOUR OWN DB NAME
+const user = 'root';
+const password = 'password'
+const connectDB = async () => {
+    try {
+        await mongoose.connect(`mongodb://${user}:${password}+'@'+${server}/${database}`, {
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+            useFindAndModify: false,
+            useCreateIndex: true
+        });
 
-  });
+        console.log('MongoDB connected!!');
+    } catch (err) {
+        console.log('Failed to connect to MongoDB', err);
+    }
+};
+
+connectDB();
