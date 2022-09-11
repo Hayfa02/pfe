@@ -62,9 +62,9 @@ services:
       ME_CONFIG_MONGODB_URL: mongodb://root:password@mongo-backend:27017/
 
   
-  networks:
-    mypfe-network:
-      external: true
+networks:
+  mypfe-network:
+    external: true
 
    
 
