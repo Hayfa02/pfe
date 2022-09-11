@@ -63,7 +63,8 @@ services:
   
 networks:
   mypfe-network:
-    external: true
+    driver: bridge
+    name: mypfe-network
 
    
 
