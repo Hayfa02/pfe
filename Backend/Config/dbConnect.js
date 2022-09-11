@@ -1,12 +1,11 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
-mongoose.Promise = global.Promise;;
-mongoose.connectted('mongodb://localhost:27017/PFE', {user:'root', password:'password'},{auth: {authSource:'PFE'}}).then(() => {
-  console.log("Successfully connected to the database");
-})
-  .catch((err) => {
-    console.log("Could not connect to the database. Error...");
-    process.exit();
+mongoose.connect('mongodb://mongo-backend:27017/PFE', {user:'root', password:'password', authSource:'PFE', useNewUrlParser: true, useUnifiedTopology: true})
+  
+mongoose.connection
+  .once("open", () => console.log("Successfully connected to the database"))
+  .on("erreur", error => {
+    console.log("Could not connect to the database. Error..." , error);
+
   });
-
-
