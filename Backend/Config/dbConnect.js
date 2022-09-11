@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
-import mongoose from 'mongoose';
 
-mongoose.connect('mongodb://mongo-backend:27017/PFE', {user:'root', password:'password', authSource:'PFE', useNewUrlParser: true, useUnifiedTopology: true})
+mongoose.connect('mongodb://root:password@mongo-backend:27017/PFE', { authSource:'PFE', useNewUrlParser: true, useUnifiedTopology: true})
   
 mongoose.connection
   .once("open", () => console.log("Successfully connected to the database"))
