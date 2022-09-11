@@ -7,7 +7,7 @@ const user = 'root';
 const password = 'password'
 const connectDB = async () => {
     try {
-        await mongoose.connect(`mongodb://${user}:${password}@${server}/${database}`, {
+        await mongoose.connect('mongodb://root:password@mongo-backend:27017/PFE', {
             useNewUrlParser: true,
             useUnifiedTopology: true,
             //useFindAndModify: false,
