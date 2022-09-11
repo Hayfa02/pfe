@@ -1,4 +1,3 @@
-
 version: '3.8' # specify docker-compose version
 
 services:
@@ -14,7 +13,7 @@ services:
     volumes:
       - ./frontend-service:/app
     networks:
-      - mypfe-network:
+      - mypfe-network
 
   backend-service:
       container_name: backend-service
@@ -28,7 +27,7 @@ services:
       volumes:
         - ./backend-service:/app
       networks:
-      - mypfe-network:
+      - mypfe-network
       environment:
         ME_CONFIG_MONGODB_ADMINUSERNAME: root
         ME_CONFIG_MONGODB_ADMINPASSWORD: password
@@ -40,7 +39,7 @@ services:
     image: mongo
     restart: always
     networks:
-      - mypfe-network:
+      - mypfe-network
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: password
@@ -53,7 +52,7 @@ services:
     image: mongo-express
     restart: always
     networks:
-      - mypfe-network:
+      - mypfe-network
     ports:
       - 7202:8081
     environment:
