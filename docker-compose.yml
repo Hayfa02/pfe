@@ -1,5 +1,4 @@
 version: '3.8' # specify docker-compose version
-
 services:
 
   frontend-service:
@@ -46,8 +45,6 @@ services:
       build: 
         context: "."
         dockerfile: "./Backend/Dockerfile"
-      #depends_on:
-      #s - mongo-backend
       ports:
         - 3000:3000
       volumes:
@@ -58,8 +55,6 @@ services:
         ME_CONFIG_MONGODB_ADMINUSERNAME: root
         ME_CONFIG_MONGODB_ADMINPASSWORD: password
         ME_CONFIG_MONGODB_URL: mongodb://root:password@mongo-backend:27017/
-
-
   
 networks:
   mypfe-network:

@@ -23,8 +23,6 @@ RUN mkdir -p /opt/frontend
 
 WORKDIR /opt/frontend
 
-
-
 COPY Frontend/ . 
 RUN npm install
 

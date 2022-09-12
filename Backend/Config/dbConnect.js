@@ -2,7 +2,21 @@
 const mongoose = require("mongoose");
 // The default url used to connect to MongoDB is mongodb://[service-name-decribed-in-the-compose-file]:/27017
 // In this case, the service name is "database"
-//const url = 'mongodb://root:password@mongo-backend:27017/';
+//const url = 'mongodb://root:password@mongo-backend:27017/+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Connect to MongoDB
 /**MongoClient.connect(url, (err, client) => {
