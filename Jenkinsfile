@@ -4,6 +4,15 @@ pipeline {
         
   
          
+          stage(' Build ') {
+              steps {
+                dir("Backend/")
+                  sh 'npm i'
+
+      }
+    }
+      
+         
           stage(' Build Docker image') {
               steps {
                 dir("Backend/")
