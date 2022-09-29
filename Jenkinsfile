@@ -7,7 +7,7 @@ pipeline {
           stage(' Build Docker image') {
               steps {
                 dir("Backend/")
-                  sh 'docker build . -t hayfa123/frontend:2.0.0'
+                  sh 'docker build . -t hayfa123/backend:2.0.0'
 
       }
     }
