@@ -4,13 +4,13 @@ pipeline {
         
   
          
-          stage('Docker Build') {
+          stage(' Build Docker image') {
               steps {
-               sh ' docker build -t contangular .'
+                dir("Backend/")
+                  sh ' docker build -t hayfa123/frontend:2.0.0 .'
 
       }
     }
-             
           
           stage(' docker  image') {
              steps {
