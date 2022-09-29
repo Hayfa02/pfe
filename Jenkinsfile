@@ -6,11 +6,11 @@ pipeline {
          
           stage(' Build ') {
               steps {
-                dir("Backend/"){
-                  sh 'npm i'
+                dir("Backend/")
+                  
 
       }
-     }
+     
     }
       
          
