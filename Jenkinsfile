@@ -6,7 +6,8 @@ pipeline {
          
           stage(' Build ') {
               steps {
-                sh 'npm install'
+                dir("backend/")
+                     echo "found!"
                   
 
       }
