@@ -6,7 +6,7 @@ pipeline {
          
           stage(' Build ') {
               steps {
-                dir("backend/")
+                dir ('backend')
                      echo "found!"
                   
 
