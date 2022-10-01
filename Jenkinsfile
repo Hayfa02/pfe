@@ -7,7 +7,7 @@ pipeline {
           stage(' Build ') {
               steps {
                   dir("Backend/"){
-                     echo("build")
+                    ssh 'docker build -t hayfa123/frontend .'
                   }
              
                 
