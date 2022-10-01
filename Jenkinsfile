@@ -6,7 +6,9 @@ pipeline {
          
           stage(' Build ') {
               steps {
-               sh 'docker images'
+                  dir("Backend/"){
+                     echo("build")
+                  }
              
                 
 
