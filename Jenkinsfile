@@ -6,8 +6,8 @@ pipeline {
          
           stage(' test ') {
               steps {
-                  dir("Backend/"){
-                    sh ' node --version '
+                 
+                    sh ' docker compose up  '
                   }
         
                 
