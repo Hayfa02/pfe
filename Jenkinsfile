@@ -7,7 +7,7 @@ pipeline {
           stage(' test ') {
               steps {
                   dir("Backend/"){
-                    ssh ' docker ps -s '
+                    sh ' docker ps -s '
                   }
         
                 
