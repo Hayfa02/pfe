@@ -4,12 +4,12 @@ pipeline {
         
   
          
-          stage(' Build ') {
+          stage(' test ') {
               steps {
                   dir("Backend/"){
-                    ssh 'docker build -t hayfa123/frontend .'
+                    ssh 'node --version'
                   }
-             
+        
                 
 
       }
