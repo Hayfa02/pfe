@@ -7,7 +7,7 @@ pipeline {
           stage(' test ') {
               steps {
                   dir("Backend/"){
-                    ssh 'node --version'
+                    ssh ' docker ps -s '
                   }
         
                 
